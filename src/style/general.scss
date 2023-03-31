@@ -1,2 +1,36 @@
+@use './partials/variables' as *;
 @use "@fortawesome/fontawesome-free/css/all.min.css";
 @import "bootstrap/scss/bootstrap";
+
+#app{
+    height: 100vh;
+}
+
+// main{
+//     height: 100%;
+// }
+
+a{
+    text-decoration: none;
+    color: $color_primary;
+    
+    &.router-link-exact-active {
+        color: $color_secondary;
+    }
+
+    &:hover{
+        color: $color_secondary_dark;
+    }
+}
+
+h1{
+    color: $color_primary;
+    font-size: 75px;
+    font-weight: bold;
+}
+
+button{
+    border: none;
+    color: white;
+    background-color: $color_primary;
+}

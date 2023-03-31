@@ -14,7 +14,7 @@ const router = createRouter({
         },
         {
             path: '/notes',
-            name: 'quizzes',
+            name: 'notes',
             component: NotesPage,
         },
         {
