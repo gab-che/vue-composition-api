@@ -1,5 +1,8 @@
 import { reactive } from 'vue';
 
 export const store = reactive({
-    //codice
 });
+
+export function getRandomColor() {
+    return "hsl(" + Math.random() * 360 + ", 100%, 75%)";
+}

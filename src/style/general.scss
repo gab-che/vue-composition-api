@@ -1,14 +1,11 @@
 @use './partials/variables' as *;
+@use './partials/utilities' as *;
 @use "@fortawesome/fontawesome-free/css/all.min.css";
 @import "bootstrap/scss/bootstrap";
 
-#app{
+body{
     height: 100vh;
 }
-
-// main{
-//     height: 100%;
-// }
 
 a{
     text-decoration: none;
@@ -27,6 +24,10 @@ h1{
     color: $color_primary;
     font-size: 75px;
     font-weight: bold;
+}
+
+p{
+    margin-bottom: 0;
 }
 
 button{
