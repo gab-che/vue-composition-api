@@ -1,5 +1,5 @@
 <script setup>
-    import { ref } from 'vue';
+    import { ref, onMounted, onBeforeUnmount, watch } from 'vue';
     import { getRandomColor } from '../store';
     import ModalNote from '../components/ModalNote.vue';
     import SingleNote from '../components/SingleNote.vue';
@@ -28,6 +28,17 @@
         showModal.value = false;
         errorMessage.value = '';
     }
+
+    watch(notes.value, () => {
+        localStorage.setItem('notes', JSON.stringify(notes.value))
+    })
+
+    onMounted(() =>{
+        if(localStorage || localStorage.getItem('notes').length > 0){
+            notes.value = JSON.parse(localStorage.getItem('notes'));
+        }
+        console.log(localStorage)
+    })
 </script>
 
 <template>
